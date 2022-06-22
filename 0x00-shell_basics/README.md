@@ -29,3 +29,6 @@ This script deletes the betty file
 
 ## 9-Bye bye My first directory
 This shell script deletes my_first_directory
+
+## 10-back
+This script allows one to navigate to the previous working directory
