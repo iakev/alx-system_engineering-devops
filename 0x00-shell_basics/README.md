@@ -38,3 +38,6 @@ This script lists all contents in current working directory,parent directory and
 
 ## 12-file_type
 This script describes the type of file named *iamafile*
+
+## 13-symbolic_link
+This shell script creates a symbolic link to*/bin/ls* named *__ls__*
