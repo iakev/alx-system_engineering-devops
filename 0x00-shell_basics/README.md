@@ -23,3 +23,9 @@ This script creates a directory named *my_first_directory* in the directory call
 
 ## 7-movethatfile
 This script moves a file *betty* from */tmp* to */tmp/my_first_directory*
+
+## 8-Bye ye Betty
+This script deletes the betty file
+
+## 9-Bye bye My first directory
+This shell script deletes my_first_directory
