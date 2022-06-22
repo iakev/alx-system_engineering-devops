@@ -11,3 +11,6 @@ This script once executed navigates to the home folder as the current directory
 
 ## 3-listfiles
 This script list contents in current directory in a long format
+
+## 4-listmorefiles
+This script list all contents in working directory including the hidden ones in long format
