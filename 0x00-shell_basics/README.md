@@ -17,3 +17,6 @@ This script list all contents in working directory including the hidden ones in 
 
 ## 5-listfilesdigitonly
 This script lists all contents even (hidden files) in a directory with users and group IDS displayed numerically
+
+## 6-firstdirectory
+This script creates a directory named *my_first_directory* in the directory called *tmp*
