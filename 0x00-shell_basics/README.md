@@ -35,3 +35,6 @@ This script allows one to navigate to the previous working directory
 
 ## 11-lists
 This script lists all contents in current working directory,parent directory and the /boot directory
+
+## 12-file_type
+This script describes the type of file named *iamafile*
