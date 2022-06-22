@@ -14,3 +14,6 @@ This script list contents in current directory in a long format
 
 ## 4-listmorefiles
 This script list all contents in working directory including the hidden ones in long format
+
+## 5-listfilesdigitonly
+This script lists all contents even (hidden files) in a directory with users and group IDS displayed numerically
