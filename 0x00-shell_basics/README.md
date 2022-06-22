@@ -32,3 +32,6 @@ This shell script deletes my_first_directory
 
 ## 10-back
 This script allows one to navigate to the previous working directory
+
+## 11-lists
+This script lists all contents in current working directory,parent directory and the /boot directory
