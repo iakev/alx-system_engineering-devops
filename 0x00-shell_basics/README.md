@@ -8,3 +8,6 @@ This script list the contents of the current working directory
 
 ## 2-bring_me_home
 This script once executed navigates to the home folder as the current directory
+
+## 3-listfiles
+This script list contents in current directory in a long format
