@@ -5,3 +5,6 @@ This script prints the full/absolute path of the current working directory it's 
 
 ## 1-listit
 This script list the contents of the current working directory
+
+## 2-bring_me_home
+This script once executed navigates to the home folder as the current directory
