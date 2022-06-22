@@ -20,3 +20,6 @@ This script lists all contents even (hidden files) in a directory with users and
 
 ## 6-firstdirectory
 This script creates a directory named *my_first_directory* in the directory called *tmp*
+
+## 7-movethatfile
+This script moves a file *betty* from */tmp* to */tmp/my_first_directory*
