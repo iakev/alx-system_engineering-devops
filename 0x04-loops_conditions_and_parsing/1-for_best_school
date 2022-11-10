@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Script that dispalys Best School 10 times using a for loop
+LINE=("Best School" "Best School" "Best School" "Best School" "Best School" "Best School" "Best School" "Best School" "Best School" "Best School")
+for i in "${LINE[@]}"; do
+    echo "$i";
+done
