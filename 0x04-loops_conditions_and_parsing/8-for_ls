@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Script that dispalys Best School 10 times using a for loop
-ls . > files
-for file in $(cat files); do
+for file in *; do
     echo "$file" | cut -d "-" -f 2;
 done
