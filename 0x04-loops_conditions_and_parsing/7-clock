@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Script that dispalys Best School 10 times using a while loop
+hour="0"
+mins="1"
+while [ $hour -lt 13 ];
+do
+    echo "Hour: $hour"
+    while [ $mins -lt 60 ];
+    do
+	echo "$mins"
+	mins=$(( mins + 1 ));
+    done
+    hour=$(( hour + 1 ))
+    mins=$(( 1 ));
+done
