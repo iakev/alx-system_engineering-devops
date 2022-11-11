@@ -9,7 +9,7 @@ if [ -e "$file" ]; then
    elif [ -s "$file" ] && [ -f "$file" ]; then
        echo "school file is not empty"
        echo "school is a regular file"
-   elif [ ! -s "$file" ]; then
+   elif [ -s "$file" ]; then
       echo "school is not empty"
    else
 	:
