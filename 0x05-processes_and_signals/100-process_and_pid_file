@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script that creates a file with its PID and traps some kill signals
 file=/var/run/myscript.pid
-trap "{ sudo rm -f '$file' ; exit 255; }" SIGQUIT SIGTERM
+trap '{ sudo rm -f $file ; exit 255; }' SIGQUIT || SIGTERM
 trap "echo I hate the kill command" SIGTERM
 trap "echo Y U no love me?!" SIGINT
 pgrep -f 100-process_and_pid_file | sudo tee "$file" > /dev/null
