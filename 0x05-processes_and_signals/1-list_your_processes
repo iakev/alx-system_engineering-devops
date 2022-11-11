@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# A script listing all currently running processes including those with no TTY
+ps -eo uname,pid,%cpu,%mem,vsz,rss,tname,stat,bsdstart,bsdtime,command
