@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script that terminates an infinte loop script '4-to_infinity_and_beyond'
+_pid=$(pgrep -f 4-to_infinity_and_beyond)
+kill "$_pid"
