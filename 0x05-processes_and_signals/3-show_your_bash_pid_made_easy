@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script that filters ps output to display lines containing bash using pgrep
+pgrep -fl bash
