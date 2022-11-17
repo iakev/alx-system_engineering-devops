@@ -1,1 +1,1 @@
-This project illustrates basic shell commands and introduces shell scripting!
+# A root project highlighting various aspects of Software DevOPs
