@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script that lists onl listening sockets
+sudo netstat -l --program
