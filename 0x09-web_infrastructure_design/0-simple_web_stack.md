@@ -1,4 +1,4 @@
-Hi![My Image](https://github.com/hallumy/alx-system_engineering-devops/blob/master/images/rsz_task_0.jpg)
+![My Image](https://github.com/hallumy/alx-system_engineering-devops/blob/master/images/rsz_task_0.jpg)
 
 General overview
 DNS lookup implements DNS query. DNS query can be of two types i.e. recursive or iterative. The Recursive DNS query deals with the best-case scenario and the Iterative DNS query deals with the worst-case scenario.
