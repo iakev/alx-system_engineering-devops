@@ -1,0 +1,6 @@
+
+# configuration file for my local SSH client
+
+Host *
+     PasswordAuthentication no
+     IdentityFile ~/.ssh/school
