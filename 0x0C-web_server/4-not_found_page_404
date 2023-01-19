@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+# script to install nginx and set up its configuration
+
+# install nginx on server
+sudo apt-get -y update
+sudo apt-get -y install nginx
+
+# configure nginx
+#make directory for the example website
+sudo mkdir -p /var/www/example.com/text
+#add a file containing root text to direcory
+sudo echo "Hello World!" | sudo tee /var/www/example.com/text/hello > /dev/null
+
+#add a file to serve as an error file
+sudo echo "Ceci n'est pas une page" | sudo tee /var/www/example.com/text/error > /dev/null
+# create current site configuration using virtual hosts (server blocks)
+sudo touch /etc/nginx/sites-available/example.com
+# add server configurations to above file 'example.com'
+sudo echo "# Virtual Host configuration for example.com
+#
+# You can move that to a different file under sites-available/ and symlink that
+# to sites-enabled/ to enable it.
+#
+server {
+       listen 80;
+       listen [::]:80;
+
+       server_name  example.com;
+
+       root /var/www/example.com/text;
+       index hello;
+
+       # Everything is a 404
+       location / {
+       		try_files \$uri \$uri/ =404;
+       }
+
+       location /redirect_me {
+       		return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+	}
+
+	error_page 404 /error;
+	location = /error {
+		 root /var/www/example.com/text;
+		 internal;
+	}
+}" | sudo tee -a  /etc/nginx/sites-available/example.com > /dev/null
+
+# enable example.com by adding a symlnk to sites-enabled/
+sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
+
+# remove default file from sites-enabled/
+sudo rm /etc/nginx/sites-enabled/default
+
+# restart nginx to have the changes commited
+sudo service nginx restart
