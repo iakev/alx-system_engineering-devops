@@ -7,10 +7,10 @@ sudo apt-get install -y haproxy=2.6.\*
 
 ## Configure HAProxy
 sudo echo "#HAproxy server conf
-frontend iakevdesign.tech
+frontend iakev
 
 	 #set uo proxy mode to level 4 tcp/ip
-	 mode tcp
+	 mode http
 
 	 #Recieve all IP addresses to listen on port 80
 	 bind *:80
@@ -19,8 +19,9 @@ frontend iakevdesign.tech
 	 default_backend web_servers
 
 backend web_servers
-	mode tcp
-	balance roundrobin
-	server s1 18.204.5.6
-	server s2 100.26.241.83
-" | sudo tee -a  /etc/haproxy/haproxy.cfg > /dev/null
+	mode http
+	server 82807-web-01 18.204.5.6:80
+	server 82807-web-02 100.26.241.83:80
+" | sudo tee -a /etc/haproxy/haproxy.cfg > /dev/null
+#restart Haproxy on changing configuration settings
+sudo service haproxy restart
