@@ -57,3 +57,6 @@ sudo rm /etc/nginx/sites-enabled/default
 
 # restart nginx to have the changes commited
 sudo service nginx restart
+
+var = $?
+return $var
