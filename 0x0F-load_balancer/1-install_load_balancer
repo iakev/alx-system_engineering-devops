@@ -20,11 +20,11 @@ frontend 82807-lb-01
 	 bind *:80
 
 	 #choosing default backend servers
+	 option httpclose
 	 option fowardfor
 	 default_backend web_servers
 
 backend web_servers
-	mode http
 	balance roundrobin
 	server 82807-web-01 18.204.5.6:80 check
 	server 82807-web-02 100.26.241.83:80 check
