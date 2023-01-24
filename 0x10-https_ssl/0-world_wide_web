@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# Script dispalying information about subdomains
+# shellcheck disable=SC2086
+
+# Function to get the type of record and ip address
+get_record_ip  () {
+    if [ $2 ]
+    then
+	sub=$2
+	dom=$1
+	full_domain="$sub.$dom"
+	record=$"dig  \"$full_domain\" | grep -A1 'ANSWER SECTION:'"
+	type_record=$(eval $record | awk '/IN/ {print $4}')
+	ip=$(eval $record | awk '/IN/ {print $5}')
+	echo "The subdomain $2 is a $type_record record and points to $ip"
+    else
+	sub_darr=(www lb-01 web-01 web-02)
+	for sub in "${sub_darr[@]}"; do
+	    dom=$1
+	    full_domain="$sub.$dom"
+	    record=$"dig  \"$full_domain\" | grep -A1 'ANSWER SECTION:'"
+	    type_record=$(eval $record | awk '/IN/ {print $4}')
+	    ip=$(eval $record | awk '/IN/ {print $5}')
+	    echo "The subdomain $sub is a $type_record record and points to $ip"
+	done
+    fi
+    return 0
+}
+
+if [ $2 ]
+then
+    get_record_ip $1 $2
+else
+    get_record_ip $1
+fi
+
+exit
