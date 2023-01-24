@@ -5,6 +5,7 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 
+sudo ufw allow 'Nginx HTTP'
 # configure nginx
 #make directory for the example website
 sudo mkdir -p /var/www/iakevdesign.tech/text
@@ -16,7 +17,6 @@ sudo echo "Ceci n'est pas une page" | sudo tee /var/www/iakevdesign.tech/text/er
 # create current site configuration using virtual hosts (server blocks)
 sudo touch /etc/nginx/sites-available/iakevdesign.tech
 # add server configurations to above file 'example.com'
-host_name=$(grep 127.0.0.1 /etc/hosts | cut -d " " -f 2- | cut -d " " -f 2)
 sudo echo "# Virtual Host configuration for iakevdesign.tech
 #
 # You can move that to a different file under sites-available/ and symlink that
@@ -28,7 +28,7 @@ server {
 
        server_name  iakevdesign.tech;
 
-       add_header X-Served-By $host_name;
+       add_header X-Served-By $HOSTNAME;
 
        root /var/www/iakevdesign.tech/text;
        index hello;
@@ -57,6 +57,3 @@ sudo rm /etc/nginx/sites-enabled/default
 
 # restart nginx to have the changes commited
 sudo service nginx restart
-
-var = $?
-return $var
