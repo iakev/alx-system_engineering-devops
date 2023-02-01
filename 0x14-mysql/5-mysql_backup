@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script to create a backup of all database in server
 
-sudo mysqldump --password "$1" --all-databases | sudo tee backup.sql
+sudo mysqldump --user "root" --password "$1" --all-databases | sudo tee backup.sql
 
 archive_name=$(date '+%d-%m-%Y')
 tar -czf "$archive_name".tar.gz backup.sql
