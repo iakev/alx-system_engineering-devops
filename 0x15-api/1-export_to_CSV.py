@@ -9,12 +9,12 @@ import sys
 
 
 if __name__ == "__main__":
-    csv_file = "USER_ID.csv"
     # get the user data from users api
     employee_id = sys.argv[1]
     r = requests.get("https://jsonplaceholder.typicode.com/users/{}"
                      .format(employee_id))
     user = r.json()
+    csv_file = "{}.csv".format(employee_id)
     # get todo list associated with the user
     payload = {'userId': employee_id}
     r = requests.get("https://jsonplaceholder.typicode.com/todos",
