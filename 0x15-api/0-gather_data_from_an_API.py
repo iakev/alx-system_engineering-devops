@@ -27,11 +27,11 @@ if __name__ == "__main__":
         if todo.get('completed'):
             completed += 1
             completed_id[todo.get('id')] = todo.get('title')
-            # print to stdout
-            print("Employee {} is done with tasks({}/{}):"
-                  .format(user.get('name'), completed, total))
-            print("\t ", end="")
-            i = 0
-            for k, v in completed_id.items():
-                i = i + 1
-                print(v, end="\n\t " if i < completed else "\n")
+        # print to stdout
+    print("Employee {} is done with tasks({}/{}):"
+          .format(user.get('name'), completed, total))
+    print("\t ", end="")
+    i = 0
+    for k, v in completed_id.items():
+        i = i + 1
+        print(v, end="\n\t " if i < completed else "\n")
