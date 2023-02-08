@@ -18,7 +18,7 @@ if __name__ == "__main__":
         task_dict = {}
         payload = {'userId': user.get('id')}
         r = requests.get("https://jsonplaceholder.typicode.com/todos",
-                     params=payload)
+                         params=payload)
         todos = r.json()
         for todo in todos:
             task_dict["username"] = user.get('username')
@@ -28,4 +28,4 @@ if __name__ == "__main__":
             task_dict = {}
         obj_dict[user.get('id')] = tasks
     with open(json_file, mode='w') as f:
-        json.dump(obj_dict,f)
+        json.dump(obj_dict, f)
