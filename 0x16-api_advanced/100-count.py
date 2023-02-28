@@ -4,14 +4,20 @@
 import requests
 
 
-def count_words(subreddit, word_list, hot_list=[],
-                count=0, payload={}, recurse_done=False):
+def count_words(subreddit, word_list,
+                count=0, payload={}, word_count={}, recurse_done=False):
     """recursive function returning all subreddit posts titles as a list"""
+    if word_count == {}:
+        for key_word in word_list:
+            word_count[key_word.lower()] = 0
     headers = {'User-agent': 'kirimiBot/0.0.1'}
     url = 'https://www.reddit.com/r/' + subreddit + '/hot.json'
     r = requests.get(url, headers=headers, params=payload,
                      allow_redirects=False)
-    full_data = r.json()
+    try:
+        full_data = r.json()
+    except Exception as e:
+        return
     data = full_data.get('data')
     if data:
         after = data.get('after')
@@ -21,31 +27,23 @@ def count_words(subreddit, word_list, hot_list=[],
             for child in children:
                 child_data = child.get('data')
                 if child_data:
-                    hot_list.append(child_data.get('title'))
+                    title = child_data.get('title')
+                    title_list = title.split()
+                    for key_word in word_list:
+                        for word in title_list:
+                            if key_word.lower() == word.lower():
+                                word_count[key_word.lower()] += 1
             if after is not None:
                 payload['after'] = after
-                hot_list, recurse_done = count_words(subreddit, word_list,
-                                                     hot_list, count,
-                                                     payload, recurse_done)
+                word_count, recurse_done = count_words(subreddit, word_list,
+                                         count, payload, word_count, recurse_done)
             else:
-                recurse_done = True
-                return hot_list, recurse_done
+                return word_count, True
     else:
         return None
-    # after getting all hot posts in hot_list then now parse and compute count
     if recurse_done:
-        word_count = {}
-        for key in word_list:
-            word_count[key] = 0
-        for title in hot_list:
-            title_list = title.split()
-            for key in word_list:
-                for word in title_list:
-                    if key.lower() == word.lower():
-                        word_count[key] += 1
-                        sorted_count = dict(sorted(word_count.items(),
-                                                   key=lambda item: item[0]))
+        sorted_count = dict(sorted(word_count.items(), key=lambda item: item[0]))
         for k, v in sorted_count.items():
-            if v != 0:
+            if v > 0:
                 print("{}: {}".format(k, v))
-    return hot_list, False
+    return word_count, False
