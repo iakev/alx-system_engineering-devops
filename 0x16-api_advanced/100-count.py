@@ -36,13 +36,16 @@ def count_words(subreddit, word_list,
             if after is not None:
                 payload['after'] = after
                 word_count, recurse_done = count_words(subreddit, word_list,
-                                         count, payload, word_count, recurse_done)
+                                                       count, payload,
+                                                       word_count,
+                                                       recurse_done)
             else:
                 return word_count, True
     else:
         return None
     if recurse_done:
-        sorted_count = dict(sorted(word_count.items(), key=lambda item: item[0]))
+        sorted_count = dict(sorted(word_count.items(),
+                                   key=lambda item: item[0]))
         for k, v in sorted_count.items():
             if v > 0:
                 print("{}: {}".format(k, v))
