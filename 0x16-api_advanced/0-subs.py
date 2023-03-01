@@ -10,7 +10,8 @@ def number_of_subscribers(subreddit):
     headers = {'User-agent': 'kirimiBot/0.0.1'}
     url = 'https://www.reddit.com/r/' + subreddit + '/about.json'
     r = requests.get(url, headers=headers, allow_redirects=False)
-    data = r.json().get('data')
-    if data:
-        subs = data.get('subscribers')
+    if r.status_code == 200:
+        data = r.json().get('data')
+        if data:
+            subs = data.get('subscribers')
     return subs
