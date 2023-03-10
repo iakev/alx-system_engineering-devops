@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script that gracefully shuts down gunicorn worker processes and restart them
+kill -s HUP $(ps aux |grep gunicorn |grep 2-hbnb | awk '{print $2}')
