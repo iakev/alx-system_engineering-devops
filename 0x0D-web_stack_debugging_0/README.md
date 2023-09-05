@@ -5,7 +5,7 @@ This repository contains various tasks related to web stack debugging.
 
 ## Program Descriptions
 
-1. **0-give_me_a_page**: A Bash script that makes a request to a URL and displays the body of the response.
+1. **0-give_me_a_page**: A Bash script that tries to rectify a given server with an error
    [View Code](https://github.com/iakev/alx-system_engineering-devops/blob/main/0x0D-web_stack_debugging_0/0-give_me_a_page)
 
 
