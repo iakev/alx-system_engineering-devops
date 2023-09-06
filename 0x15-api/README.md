@@ -24,4 +24,4 @@ Read or watch:
 - [PEP8 Python style - having a clean code respecting style guide is really appreciated in the industry](https://pep8.org/)
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/iakev/alx-system_engineering-devops/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/iakev/alx-system_engineering-devops/blob/main/LICENSE.md) file for details.
