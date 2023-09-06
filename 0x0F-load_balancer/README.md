@@ -30,4 +30,4 @@ Read or watch:
 - [Debian/Ubuntu HAProxy packages](https://haproxy.debian.net/)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/iakev/alx-system_engineering-devops/blob/main/LICENSE.md) file for details.
