@@ -94,7 +94,7 @@ Create a pull request with a clear description of your changes.
 
 ## License
 
-This project and its sub-repositories are licensed under the MIT License. See the LICENSE file in each sub-repository for details.
+This project and its sub-repositories are licensed under the MIT License. See the [LICENSE](https://github.com/iakev/alx-system_engineering-devops/blob/main/LICENSE.md) file in each sub-repository for details.
 
 ## Author
 
