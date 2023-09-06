@@ -18,4 +18,4 @@ For further information on postmortems and incident response, you can explore th
 - [Postmortem Analysis](https://en.wikipedia.org/wiki/Postmortem_documentation)
 
 ## License
-This project and its sub-repositories are licensed under the MIT License. See the LICENSE files in each sub-repository for details.
+This project and its sub-repositories are licensed under the MIT License. See the [LICENSE](https://github.com/iakev/alx-system_engineering-devops/blob/main/LICENSE.md) files for details.
