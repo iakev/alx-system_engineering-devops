@@ -16,4 +16,4 @@ This directory might contain tasks that require debugging of existing web server
 For this project, you may find the provided resource "strace is your friend" particularly helpful. It offers insights into using the `strace` tool for debugging web stack issues.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/iakev/alx-system_engineering-devops/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/iakev/alx-system_engineering-devops/blob/main/LICENSE.md) file for details.
