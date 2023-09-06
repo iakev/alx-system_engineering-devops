@@ -47,4 +47,4 @@ Read or watch:
 - [Request for Comments](https://en.wikipedia.org/wiki/Request_for_Comments)
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/iakev/alx-system_engineering-devops/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/iakev/alx-system_engineering-devops/blob/main/LICENSE.md) file for details.
