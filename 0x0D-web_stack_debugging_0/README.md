@@ -23,4 +23,4 @@ Read or watch:
 - [Youtube video First 5 Commands When I Connect on a Linux Server](https://www.youtube.com/watch?v=1_gqlbADaAw)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/iakev/alx-system_engineering-devops/blob/main/LICENSE.md) file for details.
