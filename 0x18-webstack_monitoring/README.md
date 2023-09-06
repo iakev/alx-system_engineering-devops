@@ -25,4 +25,4 @@ For further information on web stack monitoring and related topics, you can expl
 - [What is Datadog?](https://docs.datadoghq.com/overview/what_is_datadog/)
 
 ## License
-This project and its sub-repositories are licensed under the MIT License. See the LICENSE files in each sub-repository for details.
+This project and its sub-repositories are licensed under the MIT License. See the [LICENSE](https://github.com/iakev/alx-system_engineering-devops/blob/main/LICENSE.md) files for details.
